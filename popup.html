@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Browser Memory</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <input id="search" type="search" placeholder="Search saved items..." autofocus />
+    </header>
+
+    <div class="actions">
+      <button id="save-page-btn" class="btn primary">Save current page</button>
+    </div>
+
+    <div id="status" class="status"></div>
+
+    <ul id="items-list" class="items-list"></ul>
+    <div id="empty-state" class="empty-state hidden">Nothing saved yet.</div>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

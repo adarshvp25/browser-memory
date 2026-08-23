@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Browser Memory",
+  "version": "0.1.0",
+  "description": "Save useful things from the web and find them again when you need them.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Browser Memory"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": ["storage", "activeTab", "contextMenus"],
+  "commands": {
+    "save-page": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S",
+        "mac": "Command+Shift+S"
+      },
+      "description": "Save the current page to Browser Memory"
+    }
+  }
+}
