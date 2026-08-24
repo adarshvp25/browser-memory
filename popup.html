@@ -7,18 +7,49 @@
 </head>
 <body>
   <div class="app">
-    <header>
-      <input id="search" type="search" placeholder="Search saved items..." autofocus />
+    <header class="header">
+      <img class="brand-icon" src="icons/icon48.png" width="20" height="20" alt="" />
+      <h1 class="brand-name">Browser Memory</h1>
     </header>
 
-    <div class="actions">
-      <button id="save-page-btn" class="btn primary">Save current page</button>
+    <div class="search-wrap">
+      <svg class="search-icon" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">
+        <path d="M11.2 9.8a4.7 4.7 0 1 0-1.4 1.4l3.1 3.1a1 1 0 0 0 1.4-1.4l-3.1-3.1ZM3.5 7a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0Z" fill="currentColor"/>
+      </svg>
+      <input id="search" type="search" placeholder="Search saved items" aria-label="Search saved items" autofocus />
     </div>
 
-    <div id="status" class="status"></div>
+    <button id="save-page-btn" class="save-btn" type="button">
+      <svg class="save-icon" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true">
+        <path d="M4 2a1 1 0 0 0-1 1v11a.75.75 0 0 0 1.164.625L8 12.05l3.836 2.575A.75.75 0 0 0 13 14V3a1 1 0 0 0-1-1H4Z" fill="currentColor"/>
+      </svg>
+      <span id="save-btn-label">Save current page</span>
+    </button>
 
-    <ul id="items-list" class="items-list"></ul>
-    <div id="empty-state" class="empty-state hidden">Nothing saved yet.</div>
+    <div id="status" class="status" role="status" aria-live="polite"></div>
+
+    <div class="list-section">
+      <div id="list-label" class="list-label hidden">Recent</div>
+      <ul id="items-list" class="items-list"></ul>
+
+      <div id="empty-state" class="state-message hidden">
+        <svg viewBox="0 0 16 16" width="28" height="28" aria-hidden="true">
+          <path d="M4 2a1 1 0 0 0-1 1v11a.75.75 0 0 0 1.164.625L8 12.05l3.836 2.575A.75.75 0 0 0 13 14V3a1 1 0 0 0-1-1H4Z" fill="currentColor"/>
+        </svg>
+        <p class="state-title">Save anything useful. Find it later.</p>
+        <p class="state-subtitle">Click "Save current page" above to save your first item.</p>
+      </div>
+
+      <div id="no-results-state" class="state-message hidden">
+        <p class="state-title" id="no-results-text">No matches found</p>
+        <button id="clear-search-btn" class="btn link" type="button">Clear search</button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <a id="feedback-link" href="#" class="feedback-link">Feedback</a>
+      <span id="version-label" class="version-label"></span>
+    </footer>
   </div>
 
   <script type="module" src="popup.js"></script>

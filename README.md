@@ -18,10 +18,12 @@ talk to the network at all.
 - Save selected text via the right-click context menu
 - Attach an optional plain-text note to a saved page (why you saved it,
   what to remember about it)
-- View all saved items in the popup
-- Search across titles, content, notes, and URLs
+- View recently saved items in the popup, with a first-use onboarding
+  message when nothing has been saved yet
+- Search across titles, URLs, selected text, and notes
 - Open the original webpage for any saved page/selection
-- Delete saved items
+- Delete saved items (click Delete once to arm it, again to confirm --
+  guards against an accidental, irreversible click)
 
 ## Development setup
 
@@ -47,8 +49,9 @@ manifest.json    Extension manifest (MV3)
 storage.js       Persistence layer -- the only file that touches chrome.storage.local
 background.js    Service worker: context menu + keyboard shortcut handling
 popup.html       Popup UI markup
-popup.css        Popup styling
+popup.css        Popup styling (design tokens, light/dark themes)
 popup.js         Popup logic: search, save, note editing, delete, open
+icons/           Toolbar/store icons (16/48/128px)
 ```
 
 ### Why a storage abstraction?
@@ -96,6 +99,16 @@ This is intentionally simple for v1. `chrome.storage.local` has a default
 quota (a few MB), which is generous for text-only bookmarks/notes but not
 unlimited.
 
+The "Save current page" button is disabled on pages it can't meaningfully
+save (`chrome://`, extension pages, etc.) -- only `http(s)://` pages are
+savable.
+
+## Feedback link
+
+The popup footer has a "Feedback" link that opens the extension's feedback
+form. The destination is defined by the `FEEDBACK_URL` constant at the top
+of `popup.js`, so it can be updated in one place if the form ever moves.
+
 ## Limitations
 
 - Duplicate detection is URL-based and only applies to saved pages --
@@ -106,7 +119,6 @@ unlimited.
   local storage only.
 - Search is a simple case-insensitive substring match, not fuzzy or
   semantic.
-- No custom toolbar icon yet (Chrome shows its default puzzle-piece icon).
 
 ## Future possibilities
 

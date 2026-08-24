@@ -3,9 +3,19 @@
   "name": "Browser Memory",
   "version": "0.1.0",
   "description": "Save useful things from the web and find them again when you need them.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Browser Memory"
+    "default_title": "Browser Memory",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
   },
   "background": {
     "service_worker": "background.js",
