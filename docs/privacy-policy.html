@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy — Browser Memory</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --surface: #f6f8fa;
+    --border: #d8dee4;
+    --text: #1f2328;
+    --text-muted: #57606a;
+    --link: #0969da;
+    --max-width: 760px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --border: #30363d;
+      --text: #e6edf3;
+      --text-muted: #9198a1;
+      --link: #4493f8;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+
+  .page {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+  }
+
+  header.doc-header {
+    margin-bottom: 40px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+
+  .meta {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  .meta + .meta {
+    margin-top: 2px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin: 40px 0 12px;
+    padding-top: 4px;
+  }
+
+  h2 .num {
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-right: 6px;
+  }
+
+  p {
+    margin: 0 0 14px;
+  }
+
+  ul {
+    margin: 0 0 14px;
+    padding-left: 22px;
+  }
+
+  li {
+    margin-bottom: 6px;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  a {
+    color: var(--link);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 14px;
+    font-size: 0.95rem;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    vertical-align: top;
+  }
+
+  th {
+    background: var(--surface);
+    font-weight: 600;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 0 0 14px;
+  }
+
+  code {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1px 5px;
+    font-size: 0.9em;
+    font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  }
+
+  footer.doc-footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 480px) {
+    .page {
+      padding: 32px 16px 60px;
+    }
+    h1 {
+      font-size: 1.45rem;
+    }
+    h2 {
+      font-size: 1.05rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <header class="doc-header">
+      <h1>Privacy Policy — Browser Memory</h1>
+      <p class="meta">Browser Memory · Version 0.1.0</p>
+      <p class="meta">Last updated: August 31, 2026</p>
+    </header>
+
+    <section>
+      <h2><span class="num">1.</span>Introduction</h2>
+      <p>
+        Browser Memory is a Chrome extension that lets you save webpages,
+        selected text from webpages, and your own notes, so you can find
+        them again later by searching. This page explains what information
+        Browser Memory stores, how it is used, and what it does not do.
+      </p>
+      <p>
+        This policy describes the extension as it is actually implemented
+        in version 0.1.0. If a future version changes how data is handled,
+        this policy will be updated to match.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="num">2.</span>Information Stored by Browser Memory</h2>
+      <p>Browser Memory stores only the information you explicitly choose to save, specifically:</p>
+      <ul>
+        <li><strong>Page title</strong> — the title of a webpage you save</li>
+        <li><strong>Page URL</strong> — the address of a webpage you save</li>
+        <li><strong>Selected webpage text</strong> — text you highlight and save using the right-click "Save selection to Browser Memory" menu action</li>
+        <li><strong>Notes</strong> — plain text you type yourself and attach to a saved page</li>
+        <li><strong>Creation and update timestamps</strong> — when an item was saved or last edited</li>
+        <li><strong>Extension-generated item IDs</strong> — an internal identifier the extension assigns to each saved item so it can be found, edited, or deleted</li>
+      </ul>
+      <p>
+        Browser Memory does not ask you to create an account, and does not
+        collect your name, email address, or any other personal identifier
+        as part of its saving functionality.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="num">3.</span>How Information Is Used</h2>
+      <p>The information listed above is used solely to provide the extension's core functionality:</p>
+      <ul>
+        <li>Displaying your saved items in the extension popup</li>
+        <li>Letting you search your saved items by title, URL, selected text, or note</li>
+        <li>Letting you reopen the original webpage for a saved item</li>
+        <li>Letting you add, edit, or remove a note on a saved page</li>
+        <li>Preventing duplicate entries when you save a page you've already saved</li>
+      </ul>
+      <p>
+        Browser Memory only reads a webpage's title and URL at the moment
+        you take an explicit save action — clicking "Save current page,"
+        using the keyboard shortcut, or using the right-click save-selection
+        menu item. It does not run in the background or observe pages you
+        have not chosen to save.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="num">4.</span>Where Information Is Stored</h2>
+      <p>
+        All saved information is stored locally on your device using
+        Chrome's built-in <code>chrome.storage.local</code> API. There is
+        no external database, server, or backend that Browser Memory sends
+        this data to.
+      </p>
+      <div class="card">
+        <p style="margin:0">
+          Your saved items stay on the device and Chrome profile where you
+          saved them. Browser Memory does not currently sync data between
+          devices or browsers. Uninstalling the extension, or clearing the
+          extension's storage, removes this data from that device.
+        </p>
+      </div>
+      <p>
+        Browser Memory does not encrypt this stored data beyond whatever
+        protections Chrome itself applies to extension storage on your
+        device, and does not maintain any backup or retention schedule for
+        it — how long it persists depends entirely on your own use of the
+        extension (for example, deleting items or uninstalling it).
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="num">5.</span>Information We Do Not Collect</h2>
+      <p>Browser Memory does not:</p>
+      <ul>
+        <li>Transmit saved pages, URLs, selected text, notes, or any other saved data to our servers or to any third party</li>
+        <li>Make network requests (no <code>fetch</code>, XHR, WebSocket, or similar background requests) to send or retrieve your data</li>
+        <li>Collect or monitor your general browsing history — it only accesses the current tab's title/URL, or selected text, at the moment you trigger a save action</li>
+        <li>Use analytics, telemetry, tracking pixels, advertising SDKs, or any other tracking or profiling technology</li>
+        <li>Load or execute any remote JavaScript, CSS, or WebAssembly — all code that runs is packaged with the extension</li>
+        <li>Require or use a user account, login, or authentication of any kind</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="num">6.</span>Feedback Form / Google Forms</h2>
+      <p>
+        The extension popup includes an optional "Feedback" link. Clicking
+        it opens a Google Forms page in a normal new browser tab, entirely
+        outside the extension.
+      </p>
+      <ul>
+        <li>Opening the form is voluntary — Browser Memory does not open it automatically or on any schedule.</li>
+        <li>Browser Memory does not automatically fill in or submit any of your saved items, notes, or other extension data to the form.</li>
+        <li>Any information you choose to type into that form is submitted directly to Google Forms by you, and is subject to Google's own privacy practices, not Browser Memory's. We do not control what Google does with form submissions.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="num">7.</span>Data Deletion</h2>
+      <p>
+        You can delete any individual saved item directly from the
+        extension popup using its Delete control. Deleting an item removes
+        it from <code>chrome.storage.local</code> immediately.
+      </p>
+      <p>
+        To remove all data at once, you can uninstall the extension from
+        Chrome, which removes its local storage on that device.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="num">8.</span>Permissions</h2>
+      <p>Browser Memory requests the minimum Chrome extension permissions needed for its features:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Permission</th>
+            <th>Why it is needed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>storage</code></td>
+            <td>Save and retrieve your items locally via <code>chrome.storage.local</code>.</td>
+          </tr>
+          <tr>
+            <td><code>activeTab</code></td>
+            <td>Read the current tab's title and URL only when you trigger a save action (button click, keyboard shortcut, or context-menu item).</td>
+          </tr>
+          <tr>
+            <td><code>contextMenus</code></td>
+            <td>Add the "Save selection to Browser Memory" option to Chrome's right-click menu.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Browser Memory does not request broad host permissions, general
+        <code>tabs</code> access, browsing history access, or any
+        permission beyond what is listed above.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="num">9.</span>Changes to This Privacy Policy</h2>
+      <p>
+        If Browser Memory's data handling changes in a future version —
+        for example, if a sync feature were added — this policy will be
+        updated to accurately describe that change before or alongside the
+        update, and the "Last updated" date above will be revised.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="num">10.</span>Contact</h2>
+      <p>
+        Questions about this privacy policy or Browser Memory's data
+        handling can be sent to: <strong>[PUBLISHER EMAIL]</strong>
+      </p>
+    </section>
+
+    <footer class="doc-footer">
+      <p>Browser Memory — Version 0.1.0</p>
+      <p>Last updated: August 31, 2026</p>
+    </footer>
+  </div>
+</body>
+</html>
