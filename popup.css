@@ -289,13 +289,25 @@ body {
 
 .item-note {
   display: flex;
-  gap: 5px;
-  color: var(--color-text-muted);
-  font-size: 12px;
-  font-style: italic;
+  flex-direction: column;
+  gap: 2px;
   background: var(--color-surface);
   border-radius: var(--radius-sm);
   padding: 5px 7px;
+}
+
+.item-note-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-faint);
+}
+
+.item-note-text {
+  color: var(--color-text-muted);
+  font-size: 12px;
+  font-style: italic;
   overflow: hidden;
   text-overflow: ellipsis;
   word-break: break-word;
@@ -364,6 +376,18 @@ body {
   display: flex;
   flex-direction: column;
   gap: 6px;
+}
+
+.note-form-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.note-form-helper {
+  margin-top: -2px;
+  font-size: 11px;
+  color: var(--color-text-faint);
 }
 
 .note-form textarea {

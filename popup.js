@@ -121,7 +121,17 @@ function renderItem(item) {
     } else if (item.note) {
       const note = document.createElement('div');
       note.className = 'item-note';
-      note.textContent = item.note;
+
+      const noteLabel = document.createElement('span');
+      noteLabel.className = 'item-note-label';
+      noteLabel.textContent = 'Note';
+      note.appendChild(noteLabel);
+
+      const noteText = document.createElement('span');
+      noteText.className = 'item-note-text';
+      noteText.textContent = item.note;
+      note.appendChild(noteText);
+
       li.appendChild(note);
     }
   }
@@ -184,11 +194,21 @@ function renderNoteEditForm(item) {
   const wrap = document.createElement('div');
   wrap.className = 'note-form';
 
+  const label = document.createElement('div');
+  label.className = 'note-form-label';
+  label.textContent = 'Why are you saving this?';
+  wrap.appendChild(label);
+
   const textarea = document.createElement('textarea');
   textarea.rows = 3;
-  textarea.placeholder = 'Why did you save this? What do you want to remember?';
+  textarea.placeholder = 'e.g. Useful example for my landing-page research';
   textarea.value = item.note || '';
   wrap.appendChild(textarea);
+
+  const helper = document.createElement('div');
+  helper.className = 'note-form-helper';
+  helper.textContent = 'What will you be doing when you need this later?';
+  wrap.appendChild(helper);
 
   const actions = document.createElement('div');
   actions.className = 'note-form-actions';
